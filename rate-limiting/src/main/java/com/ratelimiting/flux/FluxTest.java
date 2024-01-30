@@ -22,6 +22,7 @@ public class FluxTest {
         final Flux<String> flux = Flux
                 .range(1, 2)
                 .map(i -> 10 + i)
+                .filter(i -> true)
                 .publishOn(s)
                 .map(i -> "value " + i);
         flux.subscribe(System.out::println);
