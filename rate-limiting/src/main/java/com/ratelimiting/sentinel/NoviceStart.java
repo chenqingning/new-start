@@ -4,6 +4,7 @@ import com.alibaba.csp.sentinel.Entry;
 import com.alibaba.csp.sentinel.EntryType;
 import com.alibaba.csp.sentinel.SphO;
 import com.alibaba.csp.sentinel.SphU;
+import com.alibaba.csp.sentinel.context.ContextUtil;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.alibaba.csp.sentinel.slots.block.RuleConstant;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
@@ -37,5 +38,12 @@ public class NoviceStart {
         flowRule.setCount(20);
         rules.add(flowRule);
         FlowRuleManager.loadRules(rules);
+    }
+
+    private void testInvokeSource(){
+        //默认的调用来源是""，也就是空的
+        ContextUtil.enter("sentinel_spring_web_context");
+
+        ContextUtil.enter("sentinel_spring_web_context","调用来源");
     }
 }
