@@ -62,6 +62,13 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.13.0</version> <!-- 版本号请根据实际需要更改 -->
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-gateway -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
+            <version>2.1.5.RELEASE</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.alibaba.csp/sentinel-datasource-nacos -->
         <dependency>
             <groupId>com.alibaba.csp</groupId>
