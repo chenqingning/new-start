@@ -17,7 +17,7 @@ public class GenericTypeReference<T> {
 
     public static void main(String[] args) {
         // 创建匿名子类
-        GenericTypeReference<String> genericTypeRef = new GenericTypeReference<String>() {};
+        GenericTypeReference<String> genericTypeRef = new GenericTypeReference<String>();
         System.out.println(genericTypeRef.getType()); // 输出泛型类型
     }
 }
